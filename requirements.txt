@@ -1,0 +1,49 @@
+# =============================================================================
+# requirements.txt — OULAD Research Pipeline
+# =============================================================================
+#
+# Python >= 3.9 required  (tested on 3.10)
+#
+# Install (CPU-only, recommended for most machines):
+#   pip install -r requirements.txt
+#
+# GPU note (optional — only needed for --gpu flag with TabNet / FT-Transformer):
+#   Install PyTorch with CUDA *before* running pip install -r requirements.txt
+#   See: https://pytorch.org/get-started/locally/
+#   Example (CUDA 12.1):
+#     pip install torch --index-url https://download.pytorch.org/whl/cu121
+# =============================================================================
+
+# ── Core data science ─────────────────────────────────────────────────────────
+numpy>=1.24
+pandas>=1.5
+scikit-learn>=1.2
+
+# ── Tree-based models ─────────────────────────────────────────────────────────
+# IMPORTANT: xgboost >= 2.0 required.
+# Our code does NOT pass use_label_encoder (removed in 2.0).
+# early_stopping_rounds lives in the constructor (2.x API).
+xgboost>=2.0
+
+# ── Interpretability ──────────────────────────────────────────────────────────
+shap>=0.43
+
+# ── Hyperparameter tuning ─────────────────────────────────────────────────────
+optuna>=3.0
+
+# ── Deep learning backend ─────────────────────────────────────────────────────
+# CPU build is installed by default via PyPI.
+# For GPU support install torch manually first (see header note above).
+torch>=2.0
+
+# ── Tabular deep learning ─────────────────────────────────────────────────────
+pytorch-tabnet>=4.0
+pytorch-tabular>=1.0
+
+# ── Visualization & statistics ────────────────────────────────────────────────
+matplotlib>=3.6
+seaborn>=0.12
+scipy>=1.9
+
+# ── Networking ────────────────────────────────────────────────────────────────
+requests>=2.28

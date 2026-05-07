@@ -1,0 +1,172 @@
+{
+  "model": "XGBoost",
+  "cv": {
+    "fold_accuracies": [
+      0.914097254180089,
+      0.9137904586593035,
+      0.9119496855345912,
+      0.9148511813439706,
+      0.9073335378950599
+    ],
+    "fold_f1s": [
+      0.9119496855345912,
+      0.9115239294710328,
+      0.9099183929692404,
+      0.912474373127267,
+      0.9047619047619048
+    ],
+    "fold_aucs": [
+      0.9724787966878399,
+      0.9727748489901931,
+      0.9707005000644885,
+      0.9739895052463852,
+      0.9717268874439139
+    ],
+    "mean_accuracy": 0.9124044235226029,
+    "std_accuracy": 0.002709024199112324,
+    "mean_f1": 0.9101256571728072,
+    "std_f1": 0.0028146584124846587,
+    "mean_auc": 0.972334107686564,
+    "std_auc": 0.001094798535883565
+  },
+  "feature_importance": [
+    {
+      "feature": "num_submissions",
+      "importance": 0.49295181035995483
+    },
+    {
+      "feature": "late_clicks",
+      "importance": 0.12126103043556213
+    },
+    {
+      "feature": "avg_score",
+      "importance": 0.0713660791516304
+    },
+    {
+      "feature": "max_score",
+      "importance": 0.06425987929105759
+    },
+    {
+      "feature": "num_active_days",
+      "importance": 0.05998016893863678
+    },
+    {
+      "feature": "early_clicks",
+      "importance": 0.030082494020462036
+    },
+    {
+      "feature": "unique_activities",
+      "importance": 0.021508730947971344
+    },
+    {
+      "feature": "gender",
+      "importance": 0.020598391070961952
+    },
+    {
+      "feature": "total_clicks",
+      "importance": 0.01959066092967987
+    },
+    {
+      "feature": "num_of_prev_attempts",
+      "importance": 0.018805937841534615
+    },
+    {
+      "feature": "highest_education",
+      "importance": 0.017063802108168602
+    },
+    {
+      "feature": "studied_credits",
+      "importance": 0.01443615835160017
+    },
+    {
+      "feature": "avg_daily_clicks",
+      "importance": 0.013975780457258224
+    },
+    {
+      "feature": "region",
+      "importance": 0.009681867435574532
+    },
+    {
+      "feature": "imd_band",
+      "importance": 0.009487391449511051
+    },
+    {
+      "feature": "disability",
+      "importance": 0.007507929112762213
+    },
+    {
+      "feature": "age_band",
+      "importance": 0.007441880647093058
+    }
+  ],
+  "shap_summary": [
+    {
+      "feature": "num_submissions",
+      "mean_abs_shap": 2.17657732963562
+    },
+    {
+      "feature": "avg_score",
+      "mean_abs_shap": 0.828384518623352
+    },
+    {
+      "feature": "late_clicks",
+      "mean_abs_shap": 0.8182755708694458
+    },
+    {
+      "feature": "num_active_days",
+      "mean_abs_shap": 0.5216493606567383
+    },
+    {
+      "feature": "early_clicks",
+      "mean_abs_shap": 0.40831050276756287
+    },
+    {
+      "feature": "max_score",
+      "mean_abs_shap": 0.26190057396888733
+    },
+    {
+      "feature": "unique_activities",
+      "mean_abs_shap": 0.16994689404964447
+    },
+    {
+      "feature": "highest_education",
+      "mean_abs_shap": 0.11405755579471588
+    },
+    {
+      "feature": "avg_daily_clicks",
+      "mean_abs_shap": 0.1036931574344635
+    },
+    {
+      "feature": "studied_credits",
+      "mean_abs_shap": 0.0672391876578331
+    },
+    {
+      "feature": "total_clicks",
+      "mean_abs_shap": 0.06322798132896423
+    },
+    {
+      "feature": "imd_band",
+      "mean_abs_shap": 0.05845427140593529
+    },
+    {
+      "feature": "num_of_prev_attempts",
+      "mean_abs_shap": 0.04857534170150757
+    },
+    {
+      "feature": "gender",
+      "mean_abs_shap": 0.04744083806872368
+    },
+    {
+      "feature": "region",
+      "mean_abs_shap": 0.03535814583301544
+    },
+    {
+      "feature": "age_band",
+      "mean_abs_shap": 0.019780801609158516
+    },
+    {
+      "feature": "disability",
+      "mean_abs_shap": 0.003630400402471423
+    }
+  ]
+}

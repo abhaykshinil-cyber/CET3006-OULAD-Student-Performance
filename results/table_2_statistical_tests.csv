@@ -1,0 +1,4 @@
+Comparison,Test,F1 (A),F1 (B),delta F1 (A-B),p-value,Significant
+Random Forest vs XGBoost,Wilcoxon,0.9091,0.9101,-0.0010,0.6250,No
+Random Forest vs TabNet,Wilcoxon,0.9091,0.9029,+0.0063,0.0625,No
+XGBoost vs FT-Transformer,Wilcoxon,0.9101,0.9115,-0.0014,0.6250,No

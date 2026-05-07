@@ -1,0 +1,4 @@
+Model,Accuracy,F1,"Training Time (CPU, s)","Inference Time (CPU, s)"
+Random Forest,0.7986,0.7917,0.499,0.0723
+TabNet,0.8168,0.8153,151.550,0.4001
+FT-Transformer,0.8139,0.8031,157.119,0.8875

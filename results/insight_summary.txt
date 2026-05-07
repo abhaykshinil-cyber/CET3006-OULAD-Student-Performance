@@ -1,0 +1,67 @@
+======================================================================
+RESEARCH INSIGHT SUMMARY — OULAD Student Performance Prediction
+======================================================================
+
+> Best Model by F1-Score  :  FT-Transformer
+  Mean F1   =  0.9115  (+/-0.0039)
+  Accuracy  =  0.9134  (+/-0.0032)
+  ROC-AUC   =  0.9718  (+/-0.0014)
+
+> Full Model Comparison (5-Fold CV, mean +/- std):
+  Random Forest       Acc=0.9114 +/-0.0036  F1=0.9091 +/-0.0038  AUC=0.9704 +/-0.0010
+  XGBoost             Acc=0.9124 +/-0.0027  F1=0.9101 +/-0.0028  AUC=0.9723 +/-0.0011
+  TabNet              Acc=0.9044 +/-0.0032  F1=0.9029 +/-0.0027  AUC=0.9672 +/-0.0007
+  FT-Transformer      Acc=0.9134 +/-0.0032  F1=0.9115 +/-0.0039  AUC=0.9718 +/-0.0014
+
+> Statistical Tests (Wilcoxon Signed-Rank, a = 0.05):
+  Random Forest vs XGBoost             p = 0.6250   delta = -0.0010  -> No
+  Random Forest vs TabNet              p = 0.0625   delta = +0.0063  -> No
+  XGBoost vs FT-Transformer            p = 0.6250   delta = -0.0014  -> No
+
+> Top 5 Features by SHAP (XGBoost -- mean |SHAP value|):
+  1. num_submissions               mean |SHAP| = 2.17658
+  2. avg_score                     mean |SHAP| = 0.82838
+  3. late_clicks                   mean |SHAP| = 0.81828
+  4. num_active_days               mean |SHAP| = 0.52165
+  5. early_clicks                  mean |SHAP| = 0.40831
+
+> Top 5 Features by XGBoost Gain Importance:
+  1. num_submissions               importance = 0.49295
+  2. late_clicks                   importance = 0.12126
+  3. avg_score                     importance = 0.07137
+  4. max_score                     importance = 0.06426
+  5. num_active_days               importance = 0.05998
+
+> Top 5 Features by Random Forest Importance (MDI):
+  1. num_submissions               importance = 0.25255
+  2. late_clicks                   importance = 0.15524
+  3. max_score                     importance = 0.10583
+  4. num_active_days               importance = 0.10080
+  5. avg_score                     importance = 0.08880
+
+> Key Behavioural Patterns (from feature analysis):
+  • Early engagement  (early_clicks, num_active_days)  is among the
+    strongest predictors of success.  Students who interact with VLE
+    resources in the first 30 days show significantly higher pass rates.
+
+  • Sustained engagement  (total_clicks, late_clicks, unique_activities)
+    reflects consistent effort throughout the module and is strongly
+    correlated with final outcome.
+
+  • Assessment performance  (avg_score, max_score)  is highly predictive
+    when available; however ~30 % of students have no submission records,
+    suggesting that VLE-based engagement features are more reliable for
+    early-warning systems.
+
+  • Prior attempts  (num_of_prev_attempts)  negatively correlates with
+    success, identifying at-risk students who have repeated the module.
+
+  - Studied credits  positively correlates with pass rates -- students
+    carrying heavier workloads who still pass may have higher motivation.
+
+> Implication for Early Intervention:
+  A model trained on early_clicks + num_active_days + studied_credits
+  alone could form a lightweight early-warning classifier deployable
+  within the first 30 days of a module -- before assessment data exists.
+
+======================================================================

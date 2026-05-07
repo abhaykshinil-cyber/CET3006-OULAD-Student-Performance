@@ -1,0 +1,4 @@
+Model,Train Time CPU (s),Train Time GPU (s),Train Speedup,Infer Time CPU (s),Infer Time GPU (s),Infer Speedup
+Random Forest,0.499,—  (CPU only),N/A,0.072,—  (CPU only),N/A
+TabNet,151.550,53.495,2.83×,0.400,0.227,1.76×
+FT-Transformer,157.119,25.328,6.20×,0.888,1.026,0.87×

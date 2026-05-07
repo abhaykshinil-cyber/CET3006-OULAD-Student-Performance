@@ -1,0 +1,45 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# === Virtual Environment ===
+venv/
+.venv/
+env/
+
+# === Dataset (too large for Git - download from OULAD source) ===
+data/oulad/
+
+# === Model weights & checkpoints ===
+*.pth
+*.pt
+*.ckpt
+lightning_logs/
+.pt_tmp/
+
+# === Logs ===
+logs/
+*.log
+
+# === Generated outputs (reproducible by running the pipeline) ===
+results/charts/
+results/folds/
+results/lightning_logs/
+results/shap_values.npy
+
+# === IDE & OS ===
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
+~$*
+
+# === Jupyter ===
+.ipynb_checkpoints/

@@ -1,0 +1,69 @@
+{
+  "comparison_table": [
+    {
+      "Model": "Random Forest",
+      "Accuracy": "0.9114",
+      "Acc Std": "+/-0.0036",
+      "F1-Score": "0.9091",
+      "F1 Std": "+/-0.0038",
+      "ROC-AUC": "0.9704",
+      "AUC Std": "+/-0.0010"
+    },
+    {
+      "Model": "XGBoost",
+      "Accuracy": "0.9124",
+      "Acc Std": "+/-0.0027",
+      "F1-Score": "0.9101",
+      "F1 Std": "+/-0.0028",
+      "ROC-AUC": "0.9723",
+      "AUC Std": "+/-0.0011"
+    },
+    {
+      "Model": "TabNet",
+      "Accuracy": "0.9044",
+      "Acc Std": "+/-0.0032",
+      "F1-Score": "0.9029",
+      "F1 Std": "+/-0.0027",
+      "ROC-AUC": "0.9672",
+      "AUC Std": "+/-0.0007"
+    },
+    {
+      "Model": "FT-Transformer",
+      "Accuracy": "0.9134",
+      "Acc Std": "+/-0.0032",
+      "F1-Score": "0.9115",
+      "F1 Std": "+/-0.0039",
+      "ROC-AUC": "0.9718",
+      "AUC Std": "+/-0.0014"
+    }
+  ],
+  "statistical_tests": [
+    {
+      "Comparison": "Random Forest vs XGBoost",
+      "Test": "Wilcoxon",
+      "F1 (A)": "0.9091",
+      "F1 (B)": "0.9101",
+      "delta F1 (A-B)": "-0.0010",
+      "p-value": "0.6250",
+      "Significant": "No"
+    },
+    {
+      "Comparison": "Random Forest vs TabNet",
+      "Test": "Wilcoxon",
+      "F1 (A)": "0.9091",
+      "F1 (B)": "0.9029",
+      "delta F1 (A-B)": "+0.0063",
+      "p-value": "0.0625",
+      "Significant": "No"
+    },
+    {
+      "Comparison": "XGBoost vs FT-Transformer",
+      "Test": "Wilcoxon",
+      "F1 (A)": "0.9101",
+      "F1 (B)": "0.9115",
+      "delta F1 (A-B)": "-0.0014",
+      "p-value": "0.6250",
+      "Significant": "No"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "model": "Random Forest",
+  "cv": {
+    "fold_accuracies": [
+      0.9162448228255867,
+      0.9091885258475226,
+      0.9124098788157693,
+      0.9133169683952133,
+      0.9056459036514268
+    ],
+    "fold_f1s": [
+      0.9145539906103286,
+      0.9068303430909663,
+      0.9102906520031422,
+      0.9106436817966155,
+      0.9033474776049033
+    ],
+    "fold_aucs": [
+      0.9713300419958996,
+      0.9701262407428775,
+      0.9689550142129655,
+      0.9716789556285506,
+      0.9697793445893292
+    ],
+    "mean_accuracy": 0.9113612199071038,
+    "std_accuracy": 0.0036375721161188155,
+    "mean_f1": 0.9091332290211913,
+    "std_f1": 0.0037890356242956534,
+    "mean_auc": 0.9703739194339244,
+    "std_auc": 0.0010045343029176086
+  },
+  "feature_importance": [
+    {
+      "feature": "num_submissions",
+      "importance": 0.2525542802326841
+    },
+    {
+      "feature": "late_clicks",
+      "importance": 0.15524251999301672
+    },
+    {
+      "feature": "max_score",
+      "importance": 0.10582993625175782
+    },
+    {
+      "feature": "num_active_days",
+      "importance": 0.10080117934488839
+    },
+    {
+      "feature": "avg_score",
+      "importance": 0.08879767675769855
+    },
+    {
+      "feature": "total_clicks",
+      "importance": 0.0767573041441196
+    },
+    {
+      "feature": "unique_activities",
+      "importance": 0.06287756442274973
+    },
+    {
+      "feature": "early_clicks",
+      "importance": 0.04887397475717769
+    },
+    {
+      "feature": "avg_daily_clicks",
+      "importance": 0.039964036752859644
+    },
+    {
+      "feature": "region",
+      "importance": 0.016649983690444164
+    },
+    {
+      "feature": "imd_band",
+      "importance": 0.01608134031339097
+    },
+    {
+      "feature": "studied_credits",
+      "importance": 0.011434730694753549
+    },
+    {
+      "feature": "highest_education",
+      "importance": 0.007982675762186066
+    },
+    {
+      "feature": "gender",
+      "importance": 0.00518265086678261
+    },
+    {
+      "feature": "num_of_prev_attempts",
+      "importance": 0.004470134548594539
+    },
+    {
+      "feature": "age_band",
+      "importance": 0.0040828688220524035
+    },
+    {
+      "feature": "disability",
+      "importance": 0.002417142644843509
+    }
+  ]
+}
