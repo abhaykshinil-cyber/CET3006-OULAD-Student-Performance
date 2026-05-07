@@ -1,6 +1,6 @@
 # Student Performance Prediction on OULAD
 
-This repository contains the code, experiment outputs, paper assets, and submission documents for a CET3006 research project on student performance prediction using the Open University Learning Analytics Dataset (OULAD).
+This repository contains the code and experiment outputs for a CET3006 research project on student performance prediction using the Open University Learning Analytics Dataset (OULAD).
 
 The current project compares four tabular-learning models:
 
@@ -37,7 +37,6 @@ The repository also includes:
 - Random Forest and XGBoost feature importance
 - SHAP-based interpretability for XGBoost
 - CPU and GPU timing comparison assets
-- CET3006-aligned research paper drafts and Word submission files
 
 ---
 
@@ -46,30 +45,24 @@ The repository also includes:
 ```text
 .
 |-- data/
-|   `-- oulad/
-|       |-- assessments.csv
-|       |-- courses.csv
-|       |-- studentAssessment.csv
-|       |-- studentInfo.csv
-|       |-- studentRegistration.csv
-|       |-- studentVle.csv
-|       `-- vle.csv
-|-- docs/
-|   |-- CET3006_research_paper_aligned.md
-|   |-- CET3006_final_submission.docx
-|   |-- CET3006_final_submission_resaved.docx
-|   |-- CET3006_submission_ready.docx
-|   |-- CET3006_RESEARCH_PAPER_ABHAY_KALATHIL_SHINIL.pdf
-|   `-- research_paper_draft.md
+|   `-- oulad/              # dataset CSVs (excluded from repo — see Dataset section)
+|-- diagrams/
+|   `-- old/               # archived early diagrams
 |-- results/
 |   |-- charts/
+|   |   |-- diagram1_feature_engineering.png
+|   |   |-- diagram2_methodology_pipeline.png
+|   |   |-- diagram3_system_architecture.png
 |   |   |-- figure_1_cv_metric_comparison.png
 |   |   |-- figure_2_fold_f1_distribution.png
 |   |   |-- figure_3_feature_importance_comparison.png
 |   |   |-- figure_4_shap_summary.png
 |   |   |-- figure_5_cpu_gpu_times.png
-|   |   |-- figure_6_methodology_pipeline.png
-|   |   `-- figure_7_system_architecture.png
+|   |   |-- figure_8_class_distribution.png
+|   |   |-- figure_9_radar_comparison.png
+|   |   `-- figure_10_statistical_significance.png
+|   |-- folds/
+|   |   `-- fold_indices.json
 |   |-- comparison_results.json
 |   |-- comparison_table.csv
 |   |-- feature_importance_rf.csv
@@ -97,8 +90,12 @@ The repository also includes:
 |   |-- train_ft_transformer.py
 |   |-- train_random_forest.py
 |   |-- train_tabnet.py
-|   `-- train_xgboost.py
-|-- diagrams/
+|   |-- train_xgboost.py
+|   `-- visualize_all.py
+|-- table screenshots/
+|   `-- old/               # archived table screenshots
+|-- vizualized_charts/
+|   `-- old/               # archived early charts
 |-- requirements.txt
 |-- run_with_logs.py
 `-- README.md
@@ -195,15 +192,19 @@ Key engineered features include:
 - `results/shap_summary.csv`
 - `results/shap_values.npy`
 
-### Paper Assets
+### Paper Assets (Charts & Diagrams)
 
+- `results/charts/diagram1_feature_engineering.png`
+- `results/charts/diagram2_methodology_pipeline.png`
+- `results/charts/diagram3_system_architecture.png`
 - `results/charts/figure_1_cv_metric_comparison.png`
 - `results/charts/figure_2_fold_f1_distribution.png`
 - `results/charts/figure_3_feature_importance_comparison.png`
 - `results/charts/figure_4_shap_summary.png`
 - `results/charts/figure_5_cpu_gpu_times.png`
-- `results/charts/figure_6_methodology_pipeline.png`
-- `results/charts/figure_7_system_architecture.png`
+- `results/charts/figure_8_class_distribution.png`
+- `results/charts/figure_9_radar_comparison.png`
+- `results/charts/figure_10_statistical_significance.png`
 
 ### Generated Tables for the Paper
 
@@ -211,14 +212,6 @@ Key engineered features include:
 - `results/table_2_statistical_tests.csv`
 - `results/table_3_top10_shap_features.csv`
 - `results/table_4_top10_rf_importance.csv`
-
-### Paper and Submission Files
-
-- `docs/CET3006_research_paper_aligned.md`
-- `docs/research_paper_draft.md`
-- `docs/CET3006_final_submission.docx`
-- `docs/CET3006_final_submission_resaved.docx`
-- `docs/CET3006_RESEARCH_PAPER_ABHAY_KALATHIL_SHINIL.pdf`
 
 ---
 
@@ -293,27 +286,6 @@ This step uses Microsoft Word automation on Windows:
 ```powershell
 .\src\build_submission_doc.ps1
 ```
-
----
-
-## Research Paper Notes
-
-The CET3006-aligned paper currently includes:
-
-- a structured abstract
-- contributions section
-- literature review with 16 references
-- methodology, experiments, results, conclusion, and future work
-- embedded chart and diagram placeholders in the markdown draft
-- Word submission exports
-
-The main aligned draft is:
-
-- `docs/CET3006_research_paper_aligned.md`
-
-The safer resaved Word version is:
-
-- `docs/CET3006_final_submission_resaved.docx`
 
 ---
 
